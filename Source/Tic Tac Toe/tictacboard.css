@@ -1,0 +1,30 @@
+/* Comments entered by Syed Mushfiq Rahman */
+
+/* this centers the text entered on the heading_1 tag of the html file */
+h1 {
+  text-align: center;
+}
+
+/* this sets the width and height of each table cell to 100 pixels -*/
+td {
+  width: 100px;
+  height: 100px;
+}
+
+/* this sets the margin of the table to 5 pixels  */
+table {
+  margin: 5px auto;
+}
+
+/* class elements of the left and right vertical lines are set to 3 pixels with a solid border and black color */
+.vertical_line {
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+/* class elements of the top and bottom horizontal lines are set to 3 pixels with a solid border and red color.
+ I decided to set the color to red to change it up from black as shown on the ICP file */
+.horizontal_line {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}
