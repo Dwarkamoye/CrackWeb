@@ -1,0 +1,44 @@
+<html>
+  <head>
+   <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+      <style type="text/css">
+          #colors {
+          }
+      </style>
+  </head>
+  <body>
+
+    <div id="container">
+     <h1>Enter your color</h1>
+     <input id="color" type="text"/>
+     <button id="add-to-favorite">Add to favorites</button>
+     <div class="row">
+       <div class="column">
+         <div class="preview">
+         </div>
+       </div>
+       <div class="column">
+           <br/><br/>
+
+           <!-- Favorites Section -->
+           <br/>
+           <label id="favoritesText" style="display: none"><strong>Favorites:</strong></label>
+           <br/><br/>
+           <div id="favorites">
+           </div>
+
+       </div>
+
+         <br/>
+
+       <br/>
+      <div class="color-code"></div>
+     </div>
+   </div>
+
+ </body>
+</html>

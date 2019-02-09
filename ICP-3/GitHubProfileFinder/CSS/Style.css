@@ -1,0 +1,29 @@
+body{
+background-image: url('../Images/background.jpg');
+color:#d2a010;
+background-repeat: no-repeat;
+}
+.avatar{
+    width: 40%;
+}
+#username
+{
+    border-radius: 25px;
+    height: 50px;
+    font-size: medium;
+}
+
+.margin-top-container
+{
+    margin-top: 18vh;
+}
+.margin-top-bottom
+{
+    margin-top:3vh;
+    margin-bottom:2vh;
+}
+.padding-left-details
+{
+    padding-left:5vw;
+}
+
