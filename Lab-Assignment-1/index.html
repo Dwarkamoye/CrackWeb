@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Think & Rethink</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom bg-dark ">
+        <a class="navbar-brand" href="#" style="font-size: 2rem;">
+          <img src="./image/Website%20logo.png" width="40" height="45" class="d-inline-block align-top" style="background:wheat;" alt=""> Think&Rethink
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-right">
+                <a id="home-navbar" class="nav-item nav-link" href="#company" onclick="backToHome()">Home</a>
+                <a id="services-navbar" class="nav-item nav-link" href="#services" onclick="backToHome()">Services</a>
+                <a id="about-navbar" class="nav-item nav-link" href="#about" onclick="backToHome()">About Us</a>
+                <a id="contact-navbar" class="nav-item nav-link" href="#contact" onclick="backToHome()">Contact</a>
+                <a id="loggedIn" class="nav-item nav-link dropdown-toggle showNone cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="loggedIn">
+                    <a class="dropdown-item cursor-pointer" onclick="logout()">Logout</a>
+                </div>
+            </div>
+            <ul id="login-signup" class="nav navbar-nav flex-row justify-content-between ml-auto">
+                <li class="dropdown order-1">
+                    <button type="button" id="login" data-toggle="dropdown" class="btn btn-outline-warning dropdown-toggle">Login <span class="caret"></span></button>
+                    <button type="button" id="guest" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle" onclick="login('guest')">
+                        Guest <span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="login">
+                        <li class="px-3 py-2">
+                            <div class="form" >
+                                <div class="form-group">
+                                    <input id="loginEmail" placeholder="Username" class="form-control form-control-sm" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <input id="loginPassword" placeholder="Password" class="form-control form-control-sm" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-outline-primary btn-block" onclick="login('login')">Login</button>
+                                </div>
+                                <div class="form-group text-center">
+                                    <small><a  style="color:black !important;text-decoration: none !important;">Forgot password?</a></small>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav><br><br>
+    <!-- -->
+    <div id="main">
+        <!--Text on the cover picture-->
+    <div id="company" class="jumbotron text-center company box-height img-responsive col-lg-12 col-md-12 col-sm-12">
+        <h1>Think Forward and Rethink!!</h1>
+        <p>Build skills for today, tomorrow, and beyond with us.</p>
+    </div>
+      <br><br>
+    <!-- (Services Section) -->
+    <div id="services" class="container-fluid text-center box-height">
+        <h2>SERVICES</h2>
+        <br>
+        <div class="row slideanim">
+            <div class="col-lg-4 col-md-4 col-sm-4" >
+                <!--href="development/development.html" target="_blank"-->
+                <h4 class=" col-lg-12 col-md-12 col-sm-12 cursor-pointer">
+                    <a class="a-color" onclick="showRelated('development')">&nbsp;&nbsp;
+                    <img class="logo-items" style="width: 3.7vw;" src="image/dev-logo.jpeg">Development</a>
+                </h4>
+                <p>Online courses for building websites from scratch using popular tools and languages like HTML, CSS, Python, JavaScript and more.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <h4 class="col-lg-12 col-md-12 col-sm-12  cursor-pointer">
+                    <a class="a-color" onclick="showRelated('design')">&nbsp;&nbsp;
+                    <img class="logo-items" src="image/design-logo.png">Design</a>
+                </h4>
+                <p>Find free and trending online design classes taught by the world's best designers. Learn graphic design, web design and more!</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <h4 class="col-lg-12 col-md-12 col-sm-12  cursor-pointer">
+                    <a class="a-color" onclick="showRelated('business')">&nbsp;&nbsp;
+                    <img class="logo-items" src="image/business-logo.jpeg">Business</a>
+                </h4>
+                <p>Online business courses are perfect for entrepreneurs looking to gain new skills and grow their business..</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row slideanim">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <h4 class="col-lg-12 col-md-12 col-sm-12 cursor-pointer">
+                    <a class="a-color" onclick="showRelated('software')">&nbsp;&nbsp;
+                    <img class="logo-items" src="image/software-logo.jpeg">IT & Software</a>
+                </h4>
+                <p>Enroll in IT and software courses online to learn about everything from Oracle and Bootstrap, and more...</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <h4 class="col-lg-12 col-md-12 col-sm-12  cursor-pointer">
+                    <a class="a-color" onclick="showRelated('health')">&nbsp;&nbsp;
+                    <img class="logo-items" style="width: 3.5vw;" src="image/health-logo.jpeg">Health & Fitness</a>
+                </h4>
+                <p>online fitness training courses, students will learn the basics in everything from yoga to healthy living for a career ...</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <h4 class="col-lg-12 col-md-12 col-sm-12 cursor-pointer">
+                    <a class="a-color" onclick="showRelated('music')">&nbsp;&nbsp;
+                    <img class="logo-items" style="width: 2.7vw;" src="image/music-logo.jpg">Music</a>
+                </h4>
+                <p>With the ton of free online courses available, we've decided to put together a list of best Music Courses you can sign up ...</p>
+            </div>
+        </div>
+    </div>
+      <br><br>
+        <!--  (About Section) -->
+     <div id="about" class="container-fluid box-height">
+         <h2 class="text-center">About Us</h2>
+        <div class="row text-center">
+            <div class="col-sm-8">
+                <h4>The world’s largest selection of courses
+                    Choose from over 100,000 online video courses with new additions published every month</h4><br>
+                <p>Think & Rethink is an online learning platform. It is aimed at professional adults.Unlike academic massive open online course (MOOC) programs which are driven by traditional collegiate coursework, We use content from online content creators to sell for profit. We provides tools which enable users to create a course, promote it and earn money from student.</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="./image/about_us.jpg"  width="100%">
+                <span class="glyphicon glyphicon-signal logo"></span>
+            </div>
+        </div><br><br>
+         <div class="row text-center total-courses"></div>
+     </div>
+      <br><br>
+    <!-- (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey box-height">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+        <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+    <p><span class="glyphicon glyphicon-map-marker"></span> Kansas City , Missouri , US</p>
+    <p><span class="glyphicon glyphicon-phone"></span> +1 95475454878</p>
+    <p><span class="glyphicon glyphicon-envelope"></span> mdwarkamoye@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+        <div class="row">
+        <div class="col-sm-6 form-group">
+        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+    </div>
+    <div class="col-sm-6 form-group">
+        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+    </div>
+    </div>
+    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+        <div class="col-sm-12 form-group">
+        <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- (Footer Section) -->
+    <footer class="container-fluid text-center no-padding">
+            <a href="#myPage" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <p>Project made By <a href="https://github.com/Dwarkamoye/CrackWeb" title="Visit Profile">Dwarkamoye,Kruthika&srinaga</a></p>
+        </footer>
+  </div>
+    <!-- Appending the sub categories page on selection-->
+    <div id="sub"></div>
+
+    <script src="src.js"></script>
+    </body>
+</html>

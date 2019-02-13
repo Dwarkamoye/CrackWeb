@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target="#designspy" data-offset="1" style="padding-top: 3vh;">
+
+<div class="container-fluid no-padding" style="width: 98%;">
+    <div class="row">
+        <!--side nav bar for swtching between subcategories-->
+        <nav class="col-lg-3 col-md-3 col-sm-9 leftbar" id="designspy">
+            <ul class="nav nav-pills flex-column font-2 text-right">
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link active" onclick="togglePage('des-sec-1','des-sec-2')">Graphic Design</a>
+                </li>
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link"  onclick="togglePage('des-sec-2','des-sec-1')">3D & Animation</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-lg-9 col-md-9 col-sm-9 ">
+            <!--div for subcategory - Graphic design -->
+            <div id="des-sec-1" class="box-height-1 showBlock personal-development" >
+                <h1 class="text-center" ></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/photoshop.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Photoshop Pro</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <span class="price">$13.65</span><a href="#" class="btn btn-outline-primary" >Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/illustrator.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Illustrator 2019</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <span class="price">$15.39</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/indesign.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Adobe Indesign</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <span class="price">$12.98</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--div for subcategory - 3D & Animation-->
+            <div id="des-sec-2" class="box-height-1 showNone personal-development" >
+                <h1 class="text-center"></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <img class="card-img-top" src="./image/blender.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Blender 3D animation</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <span class="price">$11.99</span><a href="#" class="btn btn-outline-primary" >Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/motion-graphics.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Motion Graphics- After Effects</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <span class="price">$10.19</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/cartoon-character.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Cartoon Character Design</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <span class="price">$9.98</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

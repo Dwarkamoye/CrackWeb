@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target="#Business" data-offset="1" style="padding-top: 3vh;">
+
+<div class="container-fluid no-padding" style="width: 98%;">
+    <div class="row">
+        <!--side nav bar for swtching between subcategories-->
+        <nav class="col-lg-3 col-md-3 col-sm-9 leftbar" id="Business">
+            <ul class="nav nav-pills flex-column font-2 text-right">
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link active" onclick="togglePage('dev-sec-1','dev-sec-2')">Finance</a>
+                </li>
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link"  onclick="togglePage('dev-sec-2','dev-sec-1')">Entrepreneurship</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-lg-9 col-md-9 col-sm-9 ">
+            <!--div for subcategory - Finance-->
+            <div id="dev-sec-1" class="box-height-1 showBlock personal-development" >
+                <h1 class="text-center" ></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/Finance-03.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">The Complete Financial Analyst</h5>
+                            <p class="card-text">Excel, Accounting, Financial Statement Analysis,Business Analysis,
+                                Financial Math, PowerPoint:Everything is Included!</p>
+                            <span class="price">$9.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Finance-02.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner to Pro in Excel</h5>
+                            <p class="card-text">Financial Modeling in Excel that would allow you to walk
+                                into a job and be a rockstar from day one!</p>
+                            <br>
+                            <span class="price">$11.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Finance-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Start Trading Stocks Using Technical Analysis!</h5>
+                            <p class="card-text">Learn secrets of professional trading from a former stock broker</p>
+                            <br>
+                            <span class="price">$12.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--div for subcategory - Entrepreneurship -->
+            <div id="dev-sec-2" class="box-height-1 showNone personal-development" >
+                <h1 class="text-center"></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/E-02.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">How to come up with killer business ideas</h5>
+                            <p class="card-text">Learn to become a  proven stratergist with actionable insights</p>
+                            <span class="price">$6.99</span><a href="#" class="btn btn-outline-primary" >Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/E-003.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">MBA in a Box</h5>
+                            <p class="card-text">A Complete MBA Training: Business Strategy, Management,
+                                                 Marketing, Accounting, Decision Making & Negotiation</p>
+                            <span class="price">$10.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/E-04.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Think Like a Leader with Brian Tracy</h5>
+                            <p class="card-text">Change your day to day habits to  achieve leadership success.</p>
+                            <span class="price">$9.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
