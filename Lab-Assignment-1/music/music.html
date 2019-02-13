@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target="#Music" data-offset="1" style="padding-top: 3vh;">
+
+<div class="container-fluid no-padding" style="width: 98%;">
+    <div class="row">
+        <!--side nav bar for swtching between subcategories-->
+        <nav class="col-lg-3 col-md-3 col-sm-9 leftbar" id="Music">
+            <ul class="nav nav-pills flex-column font-2 text-right" id="Mu-nav">
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link active" onclick="togglePage('dev-sec-1','dev-sec-2')">Instruments</a>
+                </li>
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link"  onclick="togglePage('dev-sec-2','dev-sec-1')">Vocal</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-lg-9 col-md-9 col-sm-9 ">
+            <!--div for subcategory -  Instrument -->
+            <div id="dev-sec-1" class="box-height-1 showBlock personal-development" >
+                <h1 class="text-center" ></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/Music-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Complete Guitar System-Beginner to Advanced</h5>
+                            <p class="card-text">Learn concepts extracted directly from Berklee College of Music,
+                                presented in an interactive and effective way!</p>
+                            <span class="price">$9.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Music-2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Learn To Play The Drums</h5>
+                            <p class="card-text">Become a drummer with a step by step programme
+                                to get you from being drumming novice to drumming expert!</p>
+                            <br>
+                            <span class="price">$11.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Music-3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Learn Jazz Piano Today</h5>
+                            <p class="card-text">Rich piano chords, bass line and improvisation using a 12-bar blues.
+                                                 Take your piano playing to the next level.</p>
+                            <br>
+                            <span class="price">$12.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--div for subcategory - vocal -->
+            <div id="dev-sec-2" class="box-height-1 showNone personal-development" >
+                <h1 class="text-center"></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/Music -11.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">How To Sing #2: Increase Vocal Range & Blend Registers</h5>
+                            <p class="card-text">Vocal Workouts To Get You Singing Higher,
+                                                 & Stronger With  Flexibility </p>
+                            <span class="price">$6.99</span><a href="#" class="btn btn-outline-primary" >Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Music-12.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Breathing Bootcamp for Singers</h5>
+                            <p class="card-text">Sing With Power, Beauty, and Control! and Techniques for rapid voice strengthening! </p>
+                            <span class="price">$10.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Music-13.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Your Enlightened Guide To Lyrics & Songwriting</h5>
+                            <p class="card-text">A course dedicated to lyrics & songwriting by expressing yourself uniquely.</p>
+                            <span class="price">$9.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

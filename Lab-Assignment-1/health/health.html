@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target="#Health&Fitnessspy" data-offset="1" style="padding-top: 3vh;">
+
+<div class="container-fluid no-padding" style="width: 98%;">
+    <div class="row">
+        <!--side nav bar for swtching between subcategories-->
+        <nav class="col-lg-3 col-md-3 col-sm-9 leftbar" id="Health&Fitnessspy">
+            <ul class="nav nav-pills flex-column font-2 text-right">
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link active" onclick="togglePage('dev-sec-1','dev-sec-2')">Yoga</a>
+                </li>
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link left-link"  onclick="togglePage('dev-sec-2','dev-sec-1')">Fitness</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-lg-9 col-md-9 col-sm-9 ">
+            <!--div for subcategory - Yoga -->
+            <div id="dev-sec-1" class="box-height-1 showBlock personal-development" >
+                <h1 class="text-center" ></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/Yoga-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Yoga For Absolute Beginners</h5>
+                            <p class="card-text">Learn the basic yoga poses given in most level beginner yoga
+                                                 classes in detail in the comfort of your own home.</p>
+                            <span class="price">$9.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/yoga-03.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Kids Yoga 101</h5>
+                            <p class="card-text">Learn how to teach yoga to children through exercise, movement, yoga poses, games,
+                                                 and mindfulness techniques.</p>
+                            <br>
+                            <span class="price">$11.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/yoga-04.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Om Mantra:The Heart of Traditional Yoga</h5>
+                            <p class="card-text">Learn the subtlest practices and the highest goals of Yoga through Om</p>
+                            <br>
+                            <span class="price">$12.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--div for subcategory - Fitness-->
+            <div id="dev-sec-2" class="box-height-1 showNone personal-development" >
+                <h1 class="text-center"></h1><br><br>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2 margin-left-8" >
+                        <a href="#" data-toggle="hover" title="Popover Header" data-content="Some content inside the popover"></a>
+                        <img class="card-img-top" src="./image/Fitness-02.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">The Complete Health and Wellness Course</h5>
+                            <p class="card-text">The Ultimate Guide for Improving your Fitness, Nutrition and Life</p>
+                            <span class="price">$7.99</span><a href="#" class="btn btn-outline-primary" >Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Fitness-01.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Ultimate Guide to Running </h5>
+                            <p class="card-text">Let us join you on a journey through the world of running with skills and techniques</p>
+                            <span class="price">$11.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-3 col-sm-3 margin-right-2" >
+                        <img class="card-img-top" src="./image/Fitness-03.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Fitness Ballet Programme</h5>
+                            <p class="card-text">Fitness Ballet Barres and Centre Workouts to Achieve the Most Beautiful You.</p>
+                            <span class="price">$10.99</span><a href="#" class="btn btn-outline-primary">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
