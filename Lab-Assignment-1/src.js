@@ -110,4 +110,5 @@ function logout(){
     $("#login-signup").removeClass("showNone").addClass("showBlock");
     $("#loggedIn").removeClass("showBlock").addClass("showNone");
      sessionStorage.removeItem('loginUser');
+    backToHome();
 }
