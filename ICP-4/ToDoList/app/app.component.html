@@ -1,0 +1,22 @@
+<h1 class="col-lg-12 col-md-12 col-sm-12 text-center text-capitalize" >{{title}}</h1>
+<div class="text-center">
+<table class=" col-lg-6 col-md-6 col-sm-6 text-center toDoMargin">
+  <tr class="col-lg-12 col-md-12 col-sm-12">
+    <td class="col-lg-6 col-md-6 col-sm-6"><input class="form-control" type="text"  id="addThis" [value]="name"></td>
+    <td class="col-lg-6 col-md-6 col-sm-6"><button class=" btn-outline-primary btn-transparent" (click)="addToList()">Add</button></td>
+  </tr>
+  <tr class="col-lg-12 col-md-12 col-sm-12 border border-dark table-bordered">
+    <th class="col-lg-3 col-md-3 col-sm-3">Items</th>
+    <th class="col-lg-3 col-md-3 col-sm-3">Status</th>
+    <th class="col-lg-3 col-md-3 col-sm-3">Modify</th>
+    <th class="col-lg-3 col-md-3 col-sm-3">Delete</th>
+  </tr>
+  <tr class="col-lg-12 col-md-12 col-sm-12 border border-dark table-bordered" *ngFor="let item of todolist">
+    <td class="col-lg-3 col-md-3 col-sm-3">{{item.itemName}}</td>
+    <td class="col-lg-3 col-md-3 col-sm-3">{{item.done ? '&#10003;':'&#10005;'}}</td>
+    <td class="col-lg-3 col-md-3 col-sm-3"><button class="btn-outline-secondary btn-transparent" (click)="modifyItem(item)">Modify</button></td>
+    <td class="col-lg-3 col-md-3 col-sm-3"><button class="btn-outline-danger btn-transparent" (click)="deleteItem(item)">Delete</button></td>
+  </tr>
+
+</table>
+</div>
