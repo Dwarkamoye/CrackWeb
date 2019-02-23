@@ -1,0 +1,18 @@
+<div class="row text-left ml-mr-0">
+  <div class="col-lg-12 col-md-12 col-sm-12 mt-mb-1" >
+    <h3 style="margin-left: 20vw;">We found something which you might be interested in....
+      <span class="btn btn-outline-secondary pull-right" style="margin-left: 10vw;" routerLink="/">Back</span>
+    </h3>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-sm-6 locations">
+    <div class="col-lg-12 col-md-12 col-sm-12 loc-box" *ngFor="let loc of locationData" (click)="viewLocation(loc.venue.location.lat,loc.venue.location.lng,loc.venue.name)">
+      <span >{{loc.venue.name}}</span>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6">
+    <div #gmap class="col-lg-12 col-md-12 col-sm-12" style="height:500px"></div>
+  </div>
+</div>
+
+<!---class ="col-lg-5 col-md-5 col-sm-5" class ="col-lg-6 col-md-6 col-sm-6"-->

@@ -1,0 +1,9 @@
+.main{
+  background-image: url("../../assets/image/background.gif");
+  height: -webkit-fill-available;
+  color:white
+}
+.search-bar{
+  margin-left: 20rem;
+  margin-top: 18rem;
+}
