@@ -1,9 +1,12 @@
 .main{
-  background-image: url("../../assets/image/background.gif");
+  background-image: url("../../assets/image/cooking.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   height: -webkit-fill-available;
   color:white
 }
 .search-bar{
   margin-left: 20rem;
-  margin-top: 18rem;
+  margin-top: 16rem;
 }

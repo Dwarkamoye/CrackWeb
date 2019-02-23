@@ -9,8 +9,9 @@ import { TransferDataService } from '../services/services/transfer-data.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  title = 'Nearby'
+  title = 'Nearby';
   name: string = '';
+  recipename: string = '';
   url: string = '';
   date: string = '';
   clientId = 'ZTDW3HXJRV0COJVSFWRB3FVKBTD0KC2LUVJK1NVANE4JOA1K';
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
   search() {
     this.date = this.yyyymmdd();
-    this.url = 'https://api.foursquare.com/v2/venues/explore?cat=restaurant&near='+this.name+'&client_id='+this.clientId+'&client_secret='+this.clientSecret+'&v='+this.date+'';
+    this.url = 'https://api.foursquare.com/v2/venues/explore?cat=restaurant&recipe='+this.recipename+'&near='+this.name+'&client_id='+this.clientId+'&client_secret='+this.clientSecret+'&v='+this.date+'';
     this.service.getData(this.url)
       .subscribe((data) => {
           this.transferData.setData(data['response']['groups'][0]['items']);
