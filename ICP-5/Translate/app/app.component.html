@@ -1,0 +1,15 @@
+<div class="container">
+
+<h1 class="padding-bot">Translator</h1>
+  <br>
+<input type="text" id ="clear_this"  class="infield" placeholder="Enter the text" [value]=" ">
+
+<h2 class="padding-bot">Select the language to translate:</h2><br>
+<select [(ngModel)]="selectedLevel" [selectedIndex]= 0 (change)="selected()">
+  <option *ngFor="let item of data"  [ngValue]="item">{{item.name}}</option>
+</select>
+&nbsp;
+  <button (click)="translate()">Translate</button><br><br>
+  <input class="padding-bot" type="text"[(dngModel)] = "textitem" placeholder="Translated Text">
+</div>
+<router-outlet></router-outlet>

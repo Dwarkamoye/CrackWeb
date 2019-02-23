@@ -1,0 +1,28 @@
+*{
+  display: inline-block;
+  text-align: center;
+}
+
+.container{
+  padding-top: 80px;
+  padding-left: 250px;
+
+}
+h1 h2{
+  font-family: 'Chonburi', cursive;
+}
+input[type=text]{
+  height: 150px;
+  width: 500px;
+}
+::placeholder {
+  font-size: xx-large;
+  font-family: 'Molle', cursive;
+}
+input, select, textarea{
+  font-family: 'Molle', cursive;
+  font-size: x-large;
+}
+.padding-bot{
+  padding: 20px;
+}
