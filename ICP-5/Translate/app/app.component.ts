@@ -22,7 +22,7 @@ export class AppComponent {
     {id: 'it', name: 'Italian'}
   ];
   selected() {
-this.dropdownvalue = this.selectedLevel.id;
+    this.dropdownvalue = this.selectedLevel.id;
   }
 
 translate() {
