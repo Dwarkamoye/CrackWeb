@@ -4,25 +4,39 @@
 }
 
 .container{
-  padding-top: 80px;
-  padding-left: 250px;
-
+  padding-top: 50px;
+  padding-left: 420px;
 }
-h1 h2{
+h1,h2{
   font-family: 'Chonburi', cursive;
+  color: #dee2e6c7;
+  padding: 20px;
 }
 input[type=text]{
   height: 150px;
   width: 500px;
+  border-radius: 10px;
+  border-color: #69696900;
+  background-color:#4950576e;
+  box-shadow: 2px 3px 20px 0px black;
 }
 ::placeholder {
   font-size: xx-large;
   font-family: 'Molle', cursive;
+  color : #dee2e6c7;
 }
-input, select, textarea{
+select,textarea,input{
   font-family: 'Molle', cursive;
   font-size: x-large;
+  border-radius: 10px;
+  background-color:#4950576e;
+  color : #dee2e6c7;
+  box-shadow: 2px 3px 20px 0px black;
 }
-.padding-bot{
-  padding: 20px;
+select::-ms-value{ background-color: #fafafa; color: green;}
+button{
+  border-radius: 10px;
+ margin: 10px;
 }
+
+
