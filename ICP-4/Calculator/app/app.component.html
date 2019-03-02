@@ -1,0 +1,28 @@
+
+<div class="calculator-container" alt="calculator" id="calculatorId">
+  <div class="display-class" alt="Calculator Display">
+    <!-- Calculator Display -->
+    <span id="display"></span>
+  </div>
+  <div class="button-container">
+    <button type="button" name="button" class="primary-button all-clear" (click)="allClear()" alt="Clear all entries">AC</button>
+    <button type="button" name="button" class="primary-button clear-entry" (click)="clearEntry()" alt="Clear entry">C</button>
+    <button type="button" name="button" class="primary-button operator-button" (click)="handleOperator($event)" alt="Divide">/</button>
+    <button type="button" name="button" class="primary-button operator-button" (click)="handleOperator($event)" alt="Multiply">*</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Seven">7</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Eight">8</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Nine">9</button>
+    <button type="button" name="button" class="primary-button operator-button" (click)="handleOperator($event)" alt="Subtract">-</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Four">4</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Five">5</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Six">6</button>
+    <button type="button" name="button" class="primary-button operator-button" (click)="handleOperator($event)" alt="Seven">+</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="One">1</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Two">2</button>
+    <button type="button" name="button" class="primary-button number-button" (click)="handleNumber($event)" alt="Three">3</button>
+    <button type="button" name="button" class="primary-button zero-button number-button" (click)="handleNumber($event)">0</button>
+    <button type="button" name="button" class="primary-button operator-button" (click)="handleOperator($event)" alt="Decimal">.</button>
+    <button type="button" name="button" class="primary-button equals-button" (click)="sumNumbers($event)" alt="Equals">=</button>
+  </div>
+</div>
+
