@@ -3,11 +3,11 @@
 }
 .pd-tp-1
 {
-  padding-top:1vh;
+  padding-top:2vh;
 }
 .pd-tp-3
 {
-  padding-top:3vh;
+  padding-top:4vh;
 }
 .input-box{
   width: 32rem;
@@ -22,8 +22,8 @@
 }
 .logo{
   height: 36vh;
-  width: 25vw;
-  background-image: url("../../assets/image/logo1.png");
+  width: 48vw;
+  background-image: url("../../assets/image/logo2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
