@@ -1,22 +1,24 @@
-<div class="container-fluid text-center" style="height: -webkit-fill-available;">
-  <div class="row pd-tp-23">
+<div class="container-fluid main text-center" style="height: -webkit-fill-available;">
+  <div class="row pd-tp-15">
     <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 40vw;">
       <div class="logo"></div>
-    </div><br>
+    </div>
+  </div>
+  <div class="row pd-tp-3">
     <div class ="col-lg-4 col-md-4 col-sm-4 text-right">
       <div class="dropdown show">
-        <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="category" data-toggle="dropdown" >Category</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle" id="category" data-toggle="dropdown" >Category</button>
         <div class="dropdown-menu scrollable-menu" aria-labelledby="category">
           <a class="dropdown-item" *ngFor="let item of entity" (click)="selected(item)">{{item.name}}</a>
         </div>
       </div>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-8">
-      <input type="text"  class="form-control" [value]=" " id="something">
+      <input type="text"  class="form-control input-box" [value]=" " id="something">
     </div>
   </div>
-  <div clas="row">
-    <button (click)="search()">search</button>
+  <div class="row text-center pd-tp-1" style="justify-content: space-evenly;">
+    <button class="btn btn-secondary" (click)="search()">Search</button>
   </div>
 </div>
 

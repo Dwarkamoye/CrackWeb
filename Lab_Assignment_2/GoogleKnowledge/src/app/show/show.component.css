@@ -1,5 +1,16 @@
-.pd-tp-23{
-  padding-top: 23vh;
+.pd-tp-15{
+  padding-top: 15vh;
+}
+.pd-tp-1
+{
+  padding-top:1vh;
+}
+.pd-tp-3
+{
+  padding-top:3vh;
+}
+.input-box{
+  width: 32rem;
 }
 .scrollable-menu {
   height: auto;
@@ -9,13 +20,43 @@
 .dropdown-item{
   cursor:pointer;
 }
-a .dropdown-item:hover{
-  background-color: red;
-}
 .logo{
-  height: 30vh;
+  height: 36vh;
   width: 25vw;
-  background-image: url("../../assets/image/logo2.png");
+  background-image: url("../../assets/image/logo1.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.main{
+  background-image: url("../../assets/image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.scrollable-menu:hover{
+  overflow-y: scroll;
+}
+.dropdown-item{
+  border: none;
+}
+.dropdown-item:hover{
+  border: 1px solid #96b7d8
+}
+.scrollable-menu::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  background-color: #F5F5F5;
+}
+
+.scrollable-menu::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.scrollable-menu::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
 }
