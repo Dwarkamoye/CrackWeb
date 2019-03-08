@@ -14,9 +14,10 @@ data:any;
 
   selectedLevel = {id: '10' , name: 'Person'};
   entity: Array <object> = [
-    { id: 1, name:'Book'},
-    {id:2 , name:'BookSeries'},
+    { id:1, name:'Book'},
+    { id:2 , name:'BookSeries'},
     { id:3, name :'EducationalOrganization'},
+    { id:4, name:'WebSite'},
     { id:5, name:'GovernmentOrganization'},
     { id:6, name:'Movie'},
     { id:7, name:'MovieSeries'},
@@ -27,24 +28,24 @@ data:any;
     { id:12, name:'SportsTeam'},
     { id:13, name:'TVEpisode'},
     { id:14, name:'TVSeries'},
-    { id:15, name:'VideoGame'},
-    { id:4, name:'VideoGameSeries'},
-    { id:4, name:'WebSite'},
+    { id:15, name:'VideoGame'}
     ];
-  selected() {
-    this.dropdownvalue = this.selectedLevel.name;
+  selected(item) {
+    this.dropdownvalue = item.name;
   }
 
   ngOnInit() {
-    this.search();
+    // this.search();
   }
 search(){
-    const API_KEY ='AIzaSyBCCDbKZPZiV5rCP8Uit3EHoaYQr8hDKgI';
+    alert(this.dropdownvalue);
+    const API_KEY = 'AIzaSyBCCDbKZPZiV5rCP8Uit3EHoaYQr8hDKgI';
     const inputValue = (document.getElementById('something') as HTMLInputElement).value;
-    var url='https://kgsearch.googleapis.com/v1/entities:search?query=' +inputValue+ '&indent=true&languages=en&limit=3&prefix=true&types='+this.dropdownvalue+'&alt=json&key='+API_KEY;
+    let url = 'https://kgsearch.googleapis.com/v1/entities:search?query=' + inputValue +
+      '&indent=true&languages=en&limit=3&prefix=true&types='+this.dropdownvalue + '&alt=json&key=' + API_KEY;
     this.http.get(url).subscribe((data: any ) => {
-    this.data=data;
-   console.log(data);
+    this.data = data;
+    console.log(data);
   });
   }
 }

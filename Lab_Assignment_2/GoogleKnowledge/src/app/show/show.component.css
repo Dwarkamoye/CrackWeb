@@ -1,0 +1,21 @@
+.pd-tp-23{
+  padding-top: 23vh;
+}
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+.dropdown-item{
+  cursor:pointer;
+}
+a .dropdown-item:hover{
+  background-color: red;
+}
+.logo{
+  height: 30vh;
+  width: 25vw;
+  background-image: url("../../assets/image/logo2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
