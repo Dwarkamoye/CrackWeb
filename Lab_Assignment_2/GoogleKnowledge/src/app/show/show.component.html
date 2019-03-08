@@ -1,9 +1,24 @@
-<P>Area of Search:</P><br>
-<input type="text" [value]=" " id="something">
-<p>Select the Type:</p><br>
-<select [(ngModel)]="selectedLevel" [selectedIndex]= 0 (change)="selected()">
-  <option *ngFor="let item of entity"  [ngValue]="item">{{item.name}}</option>
-</select><br><br>
-<button (click)="search()">search</button>
+
+<div class="image">
+<div class="container">
+  <div>
+    <P>Area of Search:
+      <input type="text" [value]=" " id="something"> </P><br>
+    <p>Select the Type:
+      <select [(ngModel)]="selectedLevel" [selectedIndex]= 0 (change)="selected()">
+        <option *ngFor="let item of entity"  [ngValue]="item">{{item.name}}</option>
+      </select></p><br><br>
+
+    <button (click)="search()">search</button>
+
+    <li *ngFor="let d of data" >
+     {{d.result.id}}
+     {{d.result.name}}
+    </li>
+  </div>
+  </div>
+</div>
+
+
 
 

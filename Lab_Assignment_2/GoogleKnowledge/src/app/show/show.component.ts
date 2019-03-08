@@ -43,8 +43,9 @@ search(){
     const inputValue = (document.getElementById('something') as HTMLInputElement).value;
     var url='https://kgsearch.googleapis.com/v1/entities:search?query=' +inputValue+ '&indent=true&languages=en&limit=3&prefix=true&types='+this.dropdownvalue+'&alt=json&key='+API_KEY;
     this.http.get(url).subscribe((data: any ) => {
-    this.data=data;
-   console.log(data);
+      this.data = data.itemListElement
+   console.log(data.itemListElement);
   });
   }
 }
+
