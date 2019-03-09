@@ -14,11 +14,6 @@ export class BestScoreManager {
   }
 
   public store(score: any) {
-    let av = localStorage.getItem(this.bestScore);
-    if(av){
-      let scorert = Number(av);
-      score = scorert > score ? scorert : score;
-    }
     localStorage.setItem(this.bestScore, score);
   }
 
