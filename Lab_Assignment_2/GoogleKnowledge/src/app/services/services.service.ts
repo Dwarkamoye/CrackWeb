@@ -10,12 +10,10 @@ export class ServicesService {
   gethttpData(url) {
     return this.http.get(url);
   }
-  setData(data)
-  {
+  setData(data) {
     this.data = data;
   }
-  getData()
-  {
+  getData(){
     return this.data;
   }
 }

@@ -5,7 +5,7 @@ export class BestScoreManager {
 
   private bestScore = 'snakescore';
   time ;
-  
+
   public setTime(timeout){
     this.time = timeout;
   }
