@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/summarytxt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#98EAC6"
+    android:orientation="vertical">
+
+    <!--<TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_centerInParent="true"
+        android:textSize="18sp" />-->
+    <Button
+        android:id="@+id/goback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go To Order"
+        android:layout_gravity="bottom"
+        android:onClick="gotoorder"/>
+</LinearLayout>
