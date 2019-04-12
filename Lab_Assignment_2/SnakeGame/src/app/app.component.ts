@@ -74,8 +74,13 @@ export class AppComponent implements OnInit {
     return false;
   }
   gameover(){
-    this.bestScoreService.store(this.bestscore);
-    this.bestScoreService.setTime([]);
+    let av = localStorage.getItem('snakescore');
+    if(av){
+      let scorert = Number(av);
+      this.score = scorert > this.score ? scorert : this.score;
+    }
+    this.bestScoreService.store(this.score);
+    // this.bestScoreService.setTime([]);
     window.location.reload();
   }
   playGame() {// Draw snake

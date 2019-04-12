@@ -10,7 +10,6 @@ export class ListsComponent implements OnInit {
   constructor(private service : ServicesService) { }
   ngOnInit() {
     this.listsdata=this.service.getData();
-    console.log(this.listsdata);
   }
   itemClicked(item){
     window.open(item.result.detailedDescription.url, '_blank',
