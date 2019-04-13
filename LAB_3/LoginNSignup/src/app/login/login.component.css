@@ -1,0 +1,9 @@
+img{
+  border-radius: 25px;
+  width:200px;
+}
+
+#errorstat{
+  color: red;
+  font-size: x-large;
+}
