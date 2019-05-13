@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" href="img/start.gif">
+<head>
+    <meta charset="UTF-8">
+    <title>Speed It</title>
+    <link href="style.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+</head>
+
+<body>
+    <div class="hd-navbar">
+        <div id="go_back" class="btn-back">
+            <button type="button" class="btn btn-dark" onclick="goback()">Back</button>
+        </div>
+        <div id="go_online">
+            <button type="button" class="btn btn-light" onclick="online()">Login</button>
+        </div>
+        <div id="logged-usr" class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" id="loginuser" data-toggle="dropdown" style="text-decoration: none">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="user">
+                    <a class="dropdown-item" onclick="leaderboard()">Leaderboard</a>
+                    <a class="dropdown-item" onclick="logout()">Logout</a>
+                </div>
+        </div>
+        <div id="score_div" class="btn-back">
+            <button type="button" class="btn btn-dark">
+                Score <span class="badge badge-light" id="score">0</span>
+            </button>
+            <!--<button type="button" class="btn btn-dark">Score: <span id="score">0</span></button>-->
+        </div>
+    </div>
+    <div id="container">
+        <div id="line_1" class="line"></div>
+        <div id="line_2" class="line"></div>
+        <div id="line_3" class="line"></div>
+        <div id="car" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_1" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_2" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_3" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_4" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_5" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_6" class="car">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+    </div>
+    <div id="online" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title showBlock" id="login-title">Login</h4>
+                    <h4 class="modal-title showNone" id="sign-title">Sign In</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id = "login-body" class=" col-lg-12 col-md-12 col-sm-12 showBlock">
+                        <div class="col-lg-12 col-md-12 col-sm-12 m-b-1">
+                            <span class="col-lg-4 clo-md-4 col-sm-4">Email</span>
+                            <input class="col-lg-6 clo-md-6 col-sm-6" type="email" id="email" style="margin-left: 10%;">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <span class="col-lg-4 col-md-4 col-sm-4">Password</span>&nbsp;&nbsp;&nbsp;
+                            <input class="col-lg-6 clo-md-6 col-sm-6" type="password" id="password">
+                        </div>
+                        <div class="row text-right">
+                            <a class="col-lg-12 col-md-12 col-sm-12 nw-usr-txt" onclick="showsignin()">New User</a>
+                        </div>
+
+                    </div>
+                    <div id = "signup-body" class=" col-lg-12 col-md-12 col-sm-12 showNone">
+                        <!--<div class="col-lg-12 col-md-12 col-sm-12 m-b-1">
+                            <span class="col-lg-4 clo-md-4 col-sm-4">Name</span>
+                            <input class="col-lg-6 clo-md-6 col-sm-6" type="text" id="sign-name" style="margin-left: 9%;">
+                        </div>-->
+                        <div class="col-lg-12 col-md-12 col-sm-12 m-b-1">
+                            <span class="col-lg-4 clo-md-4 col-sm-4">Email</span>
+                            <input class="col-lg-6 clo-md-6 col-sm-6" type="email" id="sign-email" style="margin-left: 10%;">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <span class="col-lg-4 col-md-4 col-sm-4">Password</span>&nbsp;&nbsp;&nbsp;
+                            <input class="col-lg-6 clo-md-6 col-sm-6" type="password" id="sign-password">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="login-sv" class="btn btn-default showBlock" onclick="login('login')">Login</button>
+                    <button type="button" id="sign-sv" class="btn btn-default showNone" onclick="login('signin')">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="leaderboard" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title showBlock" id="leaderboard-title">Leaderboard</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                       <div class="col-lg-6 col-md-6 col-sm-6 text-center ld-hd">Email</div>
+                       <div class="col-lg-6 col-md-6 col-sm-6 text-center ld-hd">Score</div>
+                        <div id = "leaderboard-body" class="col-lg-12 col-md-12 col-sm-12 showBlock text-center"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="restart-mod" class="modal fade" role="dialog" data-backdrop="false">
+        <div class="modal-dialog" style="top: 25%;">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="height: 17vw;">
+                <div class="modal-header text-center" style="justify-content: center;">
+                    <h4 class="modal-title showBlock text-center" id="restart-title">Actions</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                            <button class="restart" id="restart">Restart</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                            <button class="restart" id="publish" onclick="saveScore()">Publish Score</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/pubnub.js"></script>
+</body>
+</html>
