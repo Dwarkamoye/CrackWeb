@@ -22,7 +22,7 @@ export class BookEditComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.api.getBook(this.api.getBookId())
+    this.api.getBook(this.api.getBookId())v
       .subscribe(data => {
         this.bookForm.patchValue(data);
       });

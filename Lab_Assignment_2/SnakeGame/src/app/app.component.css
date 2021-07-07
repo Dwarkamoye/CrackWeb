@@ -1,0 +1,28 @@
+#game{
+  border: 5px solid black;
+}
+.bar{
+  background-color: #c899ff;
+  height: 7vh;
+  width: 1010px;
+  margin: 0;
+}
+.logo{
+  padding-top: 10px;
+  cursor:pointer;
+}
+.mg-left-right{
+  margin-left:13vw;
+  margin-right:10vw;
+  margin-top: 1.4vw;
+}
+.blinking{
+  animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: grey;    }
+  49%{    color: transparent; }
+  50%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: grey;    }
+}
